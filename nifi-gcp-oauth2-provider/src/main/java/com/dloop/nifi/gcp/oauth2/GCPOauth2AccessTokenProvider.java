@@ -29,6 +29,7 @@ import com.google.cloud.iam.credentials.v1.SignJwtRequest;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.google.gson.JsonSyntaxException;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.Instant;
@@ -209,6 +210,10 @@ public class GCPOauth2AccessTokenProvider
             gcpAccessToken = getDefaultCredentials();
         }
 
+        if (gcpAccessToken == null) {
+            return null;
+        }
+
         Long expiresIn = Duration.between(
             Instant.now(),
             gcpAccessToken.getExpirationTime().toInstant()
@@ -300,7 +305,7 @@ public class GCPOauth2AccessTokenProvider
                         .plusSeconds(json.get("expires_in").getAsLong())
                 )
             );
-        } catch (IOException e) {
+        } catch (IOException | JsonSyntaxException e) {
             getLogger().error(e.getMessage(), e);
 
             return null;
