@@ -14,7 +14,7 @@ This is why we created this custom controller service which adds an alternative 
 
 ```
 mvn clean install
-cp nifi-gcp-oauth2-provider-nar/target/nifi-gcp-oauth2-provider-nar-2.3.0.nar $NIFI_HOME/nar_extensions
+cp nifi-gcp-oauth2-provider-nar/target/nifi-gcp-oauth2-provider-nar-2.9.0.nar $NIFI_HOME/nar_extensions
 ```
 
 ## Usage

@@ -1,2 +1,4 @@
-/node_modules/
-target/
+.mvn
+.vscode
+node_modules
+target

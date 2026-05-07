@@ -1,1 +1,719 @@
-{"flowContents":{"identifier":"f75fca81-2cba-346a-97c5-b76831c27a79","instanceIdentifier":"8f9538af-0195-1000-8c49-3afe36845665","name":"Google Search Console Example","comments":"","position":{"x":4707.078032938425,"y":-595.5150146514118},"processGroups":[],"remoteProcessGroups":[],"processors":[{"identifier":"76b71cc8-ef51-3967-b205-b613e8992806","instanceIdentifier":"04369e22-7497-3a0c-8c8b-7e820b585e95","name":"InvokeHTTP","comments":"","position":{"x":618.0000701144991,"y":249.00277345192512},"type":"org.apache.nifi.processors.standard.InvokeHTTP","bundle":{"group":"org.apache.nifi","artifact":"nifi-standard-nar","version":"1.21.0"},"properties":{"Proxy Host":null,"Attributes to Send":null,"use-etag":"false","proxy-configuration-service":null,"Proxy Type":"http","cookie-strategy":"DISABLED","Connection Timeout":"5 secs","send-message-body":"true","set-form-filename":"true","Always Output Response":"false","etag-max-cache-size":"10MB","Content-Encoding":"DISABLED","disable-http2":"False","idle-timeout":"5 mins","Put Response Body In Attribute":null,"Use Chunked Encoding":"false","Follow Redirects":"True","Remote URL":"https://www.googleapis.com/webmasters/v3/sites","form-body-form-name":null,"Content-Type":"${mime.type}","flow-file-naming-strategy":"RANDOM","max-idle-connections":"5","invokehttp-proxy-user":null,"Read Timeout":"15 secs","Max Length To Put In Attribute":"256","ignore-response-content":"false","Proxy Port":null,"SSL Context Service":null,"Digest Authentication":"false","HTTP Method":"GET","Add Response Headers to Request":"false","oauth2-access-token-provider":"9a4b74a3-776f-314d-931b-c99c6d0a4010","Basic Authentication Username":null,"Include Date Header":"True","Penalize on \"No Retry\"":"false","Useragent":null},"propertyDescriptors":{"Proxy Host":{"name":"Proxy Host","displayName":"Proxy Host","identifiesControllerService":false,"sensitive":false},"Attributes to Send":{"name":"Attributes to Send","displayName":"Request Header Attributes Pattern","identifiesControllerService":false,"sensitive":false},"use-etag":{"name":"use-etag","displayName":"Response Cache Enabled","identifiesControllerService":false,"sensitive":false},"proxy-configuration-service":{"name":"proxy-configuration-service","displayName":"Proxy Configuration Service","identifiesControllerService":true,"sensitive":false},"Proxy Type":{"name":"Proxy Type","displayName":"Proxy Type","identifiesControllerService":false,"sensitive":false},"Basic Authentication Password":{"name":"Basic Authentication Password","displayName":"Request Password","identifiesControllerService":false,"sensitive":true},"cookie-strategy":{"name":"cookie-strategy","displayName":"Response Cookie Strategy","identifiesControllerService":false,"sensitive":false},"Connection Timeout":{"name":"Connection Timeout","displayName":"Socket Connect Timeout","identifiesControllerService":false,"sensitive":false},"send-message-body":{"name":"send-message-body","displayName":"Request Body Enabled","identifiesControllerService":false,"sensitive":false},"set-form-filename":{"name":"set-form-filename","displayName":"Request Multipart Form-Data Filename Enabled","identifiesControllerService":false,"sensitive":false},"Always Output Response":{"name":"Always Output Response","displayName":"Response Generation Required","identifiesControllerService":false,"sensitive":false},"etag-max-cache-size":{"name":"etag-max-cache-size","displayName":"Response Cache Size","identifiesControllerService":false,"sensitive":false},"Content-Encoding":{"name":"Content-Encoding","displayName":"Request Content-Encoding","identifiesControllerService":false,"sensitive":false},"disable-http2":{"name":"disable-http2","displayName":"HTTP/2 Disabled","identifiesControllerService":false,"sensitive":false},"idle-timeout":{"name":"idle-timeout","displayName":"Socket Idle Timeout","identifiesControllerService":false,"sensitive":false},"Put Response Body In Attribute":{"name":"Put Response Body In Attribute","displayName":"Response Body Attribute Name","identifiesControllerService":false,"sensitive":false},"Use Chunked Encoding":{"name":"Use Chunked Encoding","displayName":"Request Chunked Transfer-Encoding Enabled","identifiesControllerService":false,"sensitive":false},"Follow Redirects":{"name":"Follow Redirects","displayName":"Response Redirects Enabled","identifiesControllerService":false,"sensitive":false},"Remote URL":{"name":"Remote URL","displayName":"HTTP URL","identifiesControllerService":false,"sensitive":false},"form-body-form-name":{"name":"form-body-form-name","displayName":"Request Multipart Form-Data Name","identifiesControllerService":false,"sensitive":false},"Content-Type":{"name":"Content-Type","displayName":"Request Content-Type","identifiesControllerService":false,"sensitive":false},"flow-file-naming-strategy":{"name":"flow-file-naming-strategy","displayName":"Response FlowFile Naming Strategy","identifiesControllerService":false,"sensitive":false},"max-idle-connections":{"name":"max-idle-connections","displayName":"Socket Idle Connections","identifiesControllerService":false,"sensitive":false},"invokehttp-proxy-user":{"name":"invokehttp-proxy-user","displayName":"Proxy Username","identifiesControllerService":false,"sensitive":false},"Read Timeout":{"name":"Read Timeout","displayName":"Socket Read Timeout","identifiesControllerService":false,"sensitive":false},"Max Length To Put In Attribute":{"name":"Max Length To Put In Attribute","displayName":"Response Body Attribute Size","identifiesControllerService":false,"sensitive":false},"invokehttp-proxy-password":{"name":"invokehttp-proxy-password","displayName":"Proxy Password","identifiesControllerService":false,"sensitive":true},"ignore-response-content":{"name":"ignore-response-content","displayName":"Response Body Ignored","identifiesControllerService":false,"sensitive":false},"Proxy Port":{"name":"Proxy Port","displayName":"Proxy Port","identifiesControllerService":false,"sensitive":false},"SSL Context Service":{"name":"SSL Context Service","displayName":"SSL Context Service","identifiesControllerService":true,"sensitive":false},"Digest Authentication":{"name":"Digest Authentication","displayName":"Request Digest Authentication Enabled","identifiesControllerService":false,"sensitive":false},"HTTP Method":{"name":"HTTP Method","displayName":"HTTP Method","identifiesControllerService":false,"sensitive":false},"Add Response Headers to Request":{"name":"Add Response Headers to Request","displayName":"Response Header Request Attributes Enabled","identifiesControllerService":false,"sensitive":false},"oauth2-access-token-provider":{"name":"oauth2-access-token-provider","displayName":"Request OAuth2 Access Token Provider","identifiesControllerService":true,"sensitive":false},"Basic Authentication Username":{"name":"Basic Authentication Username","displayName":"Request Username","identifiesControllerService":false,"sensitive":false},"Include Date Header":{"name":"Include Date Header","displayName":"Request Date Header Enabled","identifiesControllerService":false,"sensitive":false},"Penalize on \"No Retry\"":{"name":"Penalize on \"No Retry\"","displayName":"Request Failure Penalization Enabled","identifiesControllerService":false,"sensitive":false},"Useragent":{"name":"Useragent","displayName":"Request User-Agent","identifiesControllerService":false,"sensitive":false}},"style":{},"schedulingPeriod":"0 sec","schedulingStrategy":"TIMER_DRIVEN","executionNode":"ALL","penaltyDuration":"30 sec","yieldDuration":"1 sec","bulletinLevel":"WARN","runDurationMillis":0,"concurrentlySchedulableTaskCount":1,"autoTerminatedRelationships":[],"scheduledState":"ENABLED","retryCount":10,"retriedRelationships":[],"backoffMechanism":"PENALIZE_FLOWFILE","maxBackoffPeriod":"10 mins","componentType":"PROCESSOR","groupIdentifier":"f75fca81-2cba-346a-97c5-b76831c27a79"},{"identifier":"bb201e20-c2ff-3524-a51f-e7973bd72929","instanceIdentifier":"848a19fc-9b5f-3858-ad1e-e9e3677e6e79","name":"LogAttribute","comments":"","position":{"x":1274.000070114499,"y":249.00277345192512},"type":"org.apache.nifi.processors.standard.LogAttribute","bundle":{"group":"org.apache.nifi","artifact":"nifi-standard-nar","version":"1.21.0"},"properties":{"Log prefix":null,"character-set":"UTF-8","Log FlowFile Properties":"true","Log Level":"info","attributes-to-ignore-regex":null,"Attributes to Ignore":null,"Attributes to Log":null,"attributes-to-log-regex":".*","Output Format":"Line per Attribute","Log Payload":"false"},"propertyDescriptors":{"Log prefix":{"name":"Log prefix","displayName":"Log prefix","identifiesControllerService":false,"sensitive":false},"character-set":{"name":"character-set","displayName":"Character Set","identifiesControllerService":false,"sensitive":false},"Log FlowFile Properties":{"name":"Log FlowFile Properties","displayName":"Log FlowFile Properties","identifiesControllerService":false,"sensitive":false},"Log Level":{"name":"Log Level","displayName":"Log Level","identifiesControllerService":false,"sensitive":false},"attributes-to-ignore-regex":{"name":"attributes-to-ignore-regex","displayName":"Attributes to Ignore by Regular Expression","identifiesControllerService":false,"sensitive":false},"Attributes to Ignore":{"name":"Attributes to Ignore","displayName":"Attributes to Ignore","identifiesControllerService":false,"sensitive":false},"Attributes to Log":{"name":"Attributes to Log","displayName":"Attributes to Log","identifiesControllerService":false,"sensitive":false},"attributes-to-log-regex":{"name":"attributes-to-log-regex","displayName":"Attributes to Log by Regular Expression","identifiesControllerService":false,"sensitive":false},"Output Format":{"name":"Output Format","displayName":"Output Format","identifiesControllerService":false,"sensitive":false},"Log Payload":{"name":"Log Payload","displayName":"Log Payload","identifiesControllerService":false,"sensitive":false}},"style":{},"schedulingPeriod":"0 sec","schedulingStrategy":"TIMER_DRIVEN","executionNode":"ALL","penaltyDuration":"30 sec","yieldDuration":"1 sec","bulletinLevel":"WARN","runDurationMillis":25,"concurrentlySchedulableTaskCount":1,"autoTerminatedRelationships":[],"scheduledState":"ENABLED","retryCount":10,"retriedRelationships":[],"backoffMechanism":"PENALIZE_FLOWFILE","maxBackoffPeriod":"10 mins","componentType":"PROCESSOR","groupIdentifier":"f75fca81-2cba-346a-97c5-b76831c27a79"}],"inputPorts":[],"outputPorts":[],"connections":[{"identifier":"29be635c-c053-3aff-a385-de17cd2d948f","instanceIdentifier":"f8e354e5-e729-337d-d180-a49120250250","name":"","source":{"id":"76b71cc8-ef51-3967-b205-b613e8992806","type":"PROCESSOR","groupId":"f75fca81-2cba-346a-97c5-b76831c27a79","name":"InvokeHTTP","comments":"","instanceIdentifier":"04369e22-7497-3a0c-8c8b-7e820b585e95"},"destination":{"id":"bb201e20-c2ff-3524-a51f-e7973bd72929","type":"PROCESSOR","groupId":"f75fca81-2cba-346a-97c5-b76831c27a79","name":"LogAttribute","comments":"","instanceIdentifier":"848a19fc-9b5f-3858-ad1e-e9e3677e6e79"},"labelIndex":1,"zIndex":0,"selectedRelationships":["Response","No Retry","Retry","Original","Failure"],"backPressureObjectThreshold":10000,"backPressureDataSizeThreshold":"1 GB","flowFileExpiration":"0 sec","prioritizers":[],"bends":[],"loadBalanceStrategy":"DO_NOT_LOAD_BALANCE","partitioningAttribute":"","loadBalanceCompression":"DO_NOT_COMPRESS","componentType":"CONNECTION","groupIdentifier":"f75fca81-2cba-346a-97c5-b76831c27a79"}],"labels":[],"funnels":[],"controllerServices":[{"identifier":"9a4b74a3-776f-314d-931b-c99c6d0a4010","instanceIdentifier":"9102587e-9e0d-3bfa-8761-e8f538847f3c","name":"GCPOauth2AccessTokenProvider","comments":"","type":"com.dloop.nifi.gcp.oauth2.GCPOauth2AccessTokenProvider","bundle":{"group":"com.dloop","artifact":"nifi-gcp-oauth2-provider-nar","version":"1.0.0"},"properties":{"delegate":null,"scope":"https://www.googleapis.com/auth/webmasters.readonly","gcp-credentials-provider-service":"6114d6de-af80-3f6b-bc36-92b3e0ca9907"},"propertyDescriptors":{"delegate":{"name":"delegate","displayName":"Delegate","identifiesControllerService":false,"sensitive":false},"scope":{"name":"scope","displayName":"Scope","identifiesControllerService":false,"sensitive":false},"gcp-credentials-provider-service":{"name":"gcp-credentials-provider-service","displayName":"GCP Credentials Provider Service","identifiesControllerService":true,"sensitive":false}},"controllerServiceApis":[{"type":"org.apache.nifi.oauth2.OAuth2AccessTokenProvider","bundle":{"group":"org.apache.nifi","artifact":"nifi-standard-services-api-nar","version":"1.21.0"}}],"scheduledState":"DISABLED","bulletinLevel":"WARN","componentType":"CONTROLLER_SERVICE","groupIdentifier":"f75fca81-2cba-346a-97c5-b76831c27a79"},{"identifier":"6114d6de-af80-3f6b-bc36-92b3e0ca9907","instanceIdentifier":"03553481-408e-3fd3-a19d-1009896db2c8","name":"GCPCredentialsControllerService","comments":"","type":"org.apache.nifi.processors.gcp.credentials.service.GCPCredentialsControllerService","bundle":{"group":"org.apache.nifi","artifact":"nifi-gcp-nar","version":"1.21.0"},"properties":{"proxy-configuration-service":null,"compute-engine-credentials":"false","application-default-credentials":"true","service-account-json-file":null},"propertyDescriptors":{"proxy-configuration-service":{"name":"proxy-configuration-service","displayName":"Proxy Configuration Service","identifiesControllerService":true,"sensitive":false},"compute-engine-credentials":{"name":"compute-engine-credentials","displayName":"Use Compute Engine Credentials","identifiesControllerService":false,"sensitive":false},"application-default-credentials":{"name":"application-default-credentials","displayName":"Use Application Default Credentials","identifiesControllerService":false,"sensitive":false},"service-account-json-file":{"name":"service-account-json-file","displayName":"Service Account JSON File","identifiesControllerService":false,"sensitive":false,"resourceDefinition":{"cardinality":"SINGLE","resourceTypes":["FILE"]}},"service-account-json":{"name":"service-account-json","displayName":"Service Account JSON","identifiesControllerService":false,"sensitive":true}},"controllerServiceApis":[{"type":"org.apache.nifi.gcp.credentials.service.GCPCredentialsService","bundle":{"group":"org.apache.nifi","artifact":"nifi-gcp-services-api-nar","version":"1.21.0"}}],"scheduledState":"DISABLED","bulletinLevel":"WARN","componentType":"CONTROLLER_SERVICE","groupIdentifier":"f75fca81-2cba-346a-97c5-b76831c27a79"}],"variables":{},"defaultFlowFileExpiration":"0 sec","defaultBackPressureObjectThreshold":10000,"defaultBackPressureDataSizeThreshold":"1 GB","componentType":"PROCESS_GROUP","flowFileConcurrency":"UNBOUNDED","flowFileOutboundPolicy":"STREAM_WHEN_AVAILABLE"},"externalControllerServices":{},"parameterContexts":{},"flowEncodingVersion":"1.0","parameterProviders":{},"latest":false}
+{
+    "flowContents": {
+        "identifier": "f75fca81-2cba-346a-97c5-b76831c27a79",
+        "instanceIdentifier": "8f9538af-0195-1000-8c49-3afe36845665",
+        "name": "Google Search Console Example",
+        "comments": "",
+        "position": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "processGroups": [],
+        "remoteProcessGroups": [],
+        "processors": [
+            {
+                "identifier": "bb201e20-c2ff-3524-a51f-e7973bd72929",
+                "instanceIdentifier": "e0783250-0c8f-3763-c274-02823a52849f",
+                "name": "LogAttribute",
+                "comments": "",
+                "position": {
+                    "x": 350.0,
+                    "y": 0.0
+                },
+                "type": "org.apache.nifi.processors.standard.LogAttribute",
+                "bundle": {
+                    "group": "org.apache.nifi",
+                    "artifact": "nifi-standard-nar",
+                    "version": "2.9.0"
+                },
+                "properties": {
+                    "Log FlowFile Properties": "true",
+                    "Log Level": "info",
+                    "Attributes to Ignore": null,
+                    "Attributes to Log": null,
+                    "Attributes to Ignore Regular Expression": null,
+                    "Output Format": "Line per Attribute",
+                    "Log Payload": "false",
+                    "Log Prefix": null,
+                    "Character Set": "UTF-8",
+                    "Attributes to Log Regular Expression": ".*"
+                },
+                "propertyDescriptors": {
+                    "Log FlowFile Properties": {
+                        "name": "Log FlowFile Properties",
+                        "displayName": "Log FlowFile Properties",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Log Level": {
+                        "name": "Log Level",
+                        "displayName": "Log Level",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Attributes to Ignore": {
+                        "name": "Attributes to Ignore",
+                        "displayName": "Attributes to Ignore",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Attributes to Log": {
+                        "name": "Attributes to Log",
+                        "displayName": "Attributes to Log",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Attributes to Ignore Regular Expression": {
+                        "name": "Attributes to Ignore Regular Expression",
+                        "displayName": "Attributes to Ignore Regular Expression",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Output Format": {
+                        "name": "Output Format",
+                        "displayName": "Output Format",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Log Payload": {
+                        "name": "Log Payload",
+                        "displayName": "Log Payload",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Log Prefix": {
+                        "name": "Log Prefix",
+                        "displayName": "Log Prefix",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Character Set": {
+                        "name": "Character Set",
+                        "displayName": "Character Set",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Attributes to Log Regular Expression": {
+                        "name": "Attributes to Log Regular Expression",
+                        "displayName": "Attributes to Log Regular Expression",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    }
+                },
+                "style": {},
+                "schedulingPeriod": "0 sec",
+                "schedulingStrategy": "TIMER_DRIVEN",
+                "executionNode": "ALL",
+                "penaltyDuration": "30 sec",
+                "yieldDuration": "1 sec",
+                "bulletinLevel": "WARN",
+                "runDurationMillis": 25,
+                "concurrentlySchedulableTaskCount": 1,
+                "autoTerminatedRelationships": ["success"],
+                "scheduledState": "ENABLED",
+                "retryCount": 10,
+                "retriedRelationships": [],
+                "backoffMechanism": "PENALIZE_FLOWFILE",
+                "maxBackoffPeriod": "10 mins",
+                "componentType": "PROCESSOR",
+                "groupIdentifier": "89c9c1c1-9c42-344a-a071-c7491d033480"
+            },
+            {
+                "identifier": "76b71cc8-ef51-3967-b205-b613e8992806",
+                "instanceIdentifier": "54fdfa7f-ebe1-3951-bd1c-7f28878eefa9",
+                "name": "InvokeHTTP",
+                "comments": "",
+                "position": {
+                    "x": -350.0,
+                    "y": 0.0
+                },
+                "type": "org.apache.nifi.processors.standard.InvokeHTTP",
+                "bundle": {
+                    "group": "org.apache.nifi",
+                    "artifact": "nifi-standard-nar",
+                    "version": "2.9.0"
+                },
+                "properties": {
+                    "Request Content-Encoding": "DISABLED",
+                    "Request Multipart Form-Data Filename Enabled": "true",
+                    "Request Chunked Transfer-Encoding Enabled": "false",
+                    "Response Header Request Attributes Prefix": null,
+                    "Proxy Configuration Service": null,
+                    "HTTP/2 Disabled": "False",
+                    "Connection Timeout": "5 secs",
+                    "Response Cookie Strategy": "DISABLED",
+                    "Socket Read Timeout": "15 secs",
+                    "Socket Idle Connections": "5",
+                    "Request Body Enabled": "true",
+                    "OAuth2 Access Token Refresh Strategy": "ON_TOKEN_EXPIRATION",
+                    "HTTP URL": "https://www.googleapis.com/webmasters/v3/sites",
+                    "Request OAuth2 Access Token Provider": "9a4b74a3-776f-314d-931b-c99c6d0a4010",
+                    "Socket Idle Timeout": "5 mins",
+                    "Response Redirects Enabled": "True",
+                    "x-goog-user-project": "",
+                    "Socket Write Timeout": "15 secs",
+                    "Request Header Attributes Pattern": null,
+                    "Response FlowFile Naming Strategy": "RANDOM",
+                    "Response Cache Enabled": "false",
+                    "Request Date Header Enabled": "True",
+                    "Request Failure Penalization Enabled": "false",
+                    "Response Body Attribute Size": "256",
+                    "SSL Context Service": null,
+                    "Response Generation Required": "true",
+                    "Request User-Agent": null,
+                    "Response Header Request Attributes Enabled": "false",
+                    "HTTP Method": "GET",
+                    "Request Username": null,
+                    "Request Content-Type": "${mime.type}",
+                    "Response Body Attribute Name": null,
+                    "Request Digest Authentication Enabled": "false",
+                    "Request Multipart Form-Data Name": null,
+                    "Response Cache Size": "10MB",
+                    "Response Body Ignored": "false"
+                },
+                "propertyDescriptors": {
+                    "Request Content-Encoding": {
+                        "name": "Request Content-Encoding",
+                        "displayName": "Request Content-Encoding",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Request Multipart Form-Data Filename Enabled": {
+                        "name": "Request Multipart Form-Data Filename Enabled",
+                        "displayName": "Request Multipart Form-Data Filename Enabled",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Request Chunked Transfer-Encoding Enabled": {
+                        "name": "Request Chunked Transfer-Encoding Enabled",
+                        "displayName": "Request Chunked Transfer-Encoding Enabled",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Response Header Request Attributes Prefix": {
+                        "name": "Response Header Request Attributes Prefix",
+                        "displayName": "Response Header Request Attributes Prefix",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Proxy Configuration Service": {
+                        "name": "Proxy Configuration Service",
+                        "displayName": "Proxy Configuration Service",
+                        "identifiesControllerService": true,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "HTTP/2 Disabled": {
+                        "name": "HTTP/2 Disabled",
+                        "displayName": "HTTP/2 Disabled",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Connection Timeout": {
+                        "name": "Connection Timeout",
+                        "displayName": "Connection Timeout",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Response Cookie Strategy": {
+                        "name": "Response Cookie Strategy",
+                        "displayName": "Response Cookie Strategy",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Request Password": {
+                        "name": "Request Password",
+                        "displayName": "Request Password",
+                        "identifiesControllerService": false,
+                        "sensitive": true,
+                        "dynamic": false
+                    },
+                    "Socket Read Timeout": {
+                        "name": "Socket Read Timeout",
+                        "displayName": "Socket Read Timeout",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Socket Idle Connections": {
+                        "name": "Socket Idle Connections",
+                        "displayName": "Socket Idle Connections",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Request Body Enabled": {
+                        "name": "Request Body Enabled",
+                        "displayName": "Request Body Enabled",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "OAuth2 Access Token Refresh Strategy": {
+                        "name": "OAuth2 Access Token Refresh Strategy",
+                        "displayName": "OAuth2 Access Token Refresh Strategy",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "HTTP URL": {
+                        "name": "HTTP URL",
+                        "displayName": "HTTP URL",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Request OAuth2 Access Token Provider": {
+                        "name": "Request OAuth2 Access Token Provider",
+                        "displayName": "Request OAuth2 Access Token Provider",
+                        "identifiesControllerService": true,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Socket Idle Timeout": {
+                        "name": "Socket Idle Timeout",
+                        "displayName": "Socket Idle Timeout",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Response Redirects Enabled": {
+                        "name": "Response Redirects Enabled",
+                        "displayName": "Response Redirects Enabled",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "x-goog-user-project": {
+                        "name": "x-goog-user-project",
+                        "displayName": "x-goog-user-project",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": true
+                    },
+                    "Socket Write Timeout": {
+                        "name": "Socket Write Timeout",
+                        "displayName": "Socket Write Timeout",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Request Header Attributes Pattern": {
+                        "name": "Request Header Attributes Pattern",
+                        "displayName": "Request Header Attributes Pattern",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Response FlowFile Naming Strategy": {
+                        "name": "Response FlowFile Naming Strategy",
+                        "displayName": "Response FlowFile Naming Strategy",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Response Cache Enabled": {
+                        "name": "Response Cache Enabled",
+                        "displayName": "Response Cache Enabled",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Request Date Header Enabled": {
+                        "name": "Request Date Header Enabled",
+                        "displayName": "Request Date Header Enabled",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Request Failure Penalization Enabled": {
+                        "name": "Request Failure Penalization Enabled",
+                        "displayName": "Request Failure Penalization Enabled",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Response Body Attribute Size": {
+                        "name": "Response Body Attribute Size",
+                        "displayName": "Response Body Attribute Size",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "SSL Context Service": {
+                        "name": "SSL Context Service",
+                        "displayName": "SSL Context Service",
+                        "identifiesControllerService": true,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Response Generation Required": {
+                        "name": "Response Generation Required",
+                        "displayName": "Response Generation Required",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Request User-Agent": {
+                        "name": "Request User-Agent",
+                        "displayName": "Request User-Agent",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Response Header Request Attributes Enabled": {
+                        "name": "Response Header Request Attributes Enabled",
+                        "displayName": "Response Header Request Attributes Enabled",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "HTTP Method": {
+                        "name": "HTTP Method",
+                        "displayName": "HTTP Method",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Request Username": {
+                        "name": "Request Username",
+                        "displayName": "Request Username",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Request Content-Type": {
+                        "name": "Request Content-Type",
+                        "displayName": "Request Content-Type",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Response Body Attribute Name": {
+                        "name": "Response Body Attribute Name",
+                        "displayName": "Response Body Attribute Name",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Request Digest Authentication Enabled": {
+                        "name": "Request Digest Authentication Enabled",
+                        "displayName": "Request Digest Authentication Enabled",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Request Multipart Form-Data Name": {
+                        "name": "Request Multipart Form-Data Name",
+                        "displayName": "Request Multipart Form-Data Name",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Response Cache Size": {
+                        "name": "Response Cache Size",
+                        "displayName": "Response Cache Size",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Response Body Ignored": {
+                        "name": "Response Body Ignored",
+                        "displayName": "Response Body Ignored",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    }
+                },
+                "style": {},
+                "schedulingPeriod": "60 sec",
+                "schedulingStrategy": "TIMER_DRIVEN",
+                "executionNode": "ALL",
+                "penaltyDuration": "30 sec",
+                "yieldDuration": "1 sec",
+                "bulletinLevel": "WARN",
+                "runDurationMillis": 0,
+                "concurrentlySchedulableTaskCount": 1,
+                "autoTerminatedRelationships": [],
+                "scheduledState": "ENABLED",
+                "retryCount": 10,
+                "retriedRelationships": [],
+                "backoffMechanism": "PENALIZE_FLOWFILE",
+                "maxBackoffPeriod": "10 mins",
+                "componentType": "PROCESSOR",
+                "groupIdentifier": "89c9c1c1-9c42-344a-a071-c7491d033480"
+            }
+        ],
+        "inputPorts": [],
+        "outputPorts": [],
+        "connections": [
+            {
+                "identifier": "29be635c-c053-3aff-a385-de17cd2d948f",
+                "instanceIdentifier": "092347ad-3a2c-30a1-d7b6-e19263fbf2b6",
+                "name": "",
+                "source": {
+                    "id": "76b71cc8-ef51-3967-b205-b613e8992806",
+                    "type": "PROCESSOR",
+                    "groupId": "89c9c1c1-9c42-344a-a071-c7491d033480",
+                    "name": "InvokeHTTP",
+                    "comments": "",
+                    "instanceIdentifier": "54fdfa7f-ebe1-3951-bd1c-7f28878eefa9"
+                },
+                "destination": {
+                    "id": "bb201e20-c2ff-3524-a51f-e7973bd72929",
+                    "type": "PROCESSOR",
+                    "groupId": "89c9c1c1-9c42-344a-a071-c7491d033480",
+                    "name": "LogAttribute",
+                    "comments": "",
+                    "instanceIdentifier": "e0783250-0c8f-3763-c274-02823a52849f"
+                },
+                "labelIndex": 1,
+                "zIndex": 0,
+                "selectedRelationships": [
+                    "Response",
+                    "No Retry",
+                    "Retry",
+                    "Original",
+                    "Failure"
+                ],
+                "backPressureObjectThreshold": 10000,
+                "backPressureDataSizeThreshold": "1 GB",
+                "flowFileExpiration": "0 sec",
+                "prioritizers": [],
+                "bends": [],
+                "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+                "partitioningAttribute": "",
+                "loadBalanceCompression": "DO_NOT_COMPRESS",
+                "componentType": "CONNECTION",
+                "groupIdentifier": "89c9c1c1-9c42-344a-a071-c7491d033480"
+            }
+        ],
+        "labels": [],
+        "funnels": [],
+        "controllerServices": [
+            {
+                "identifier": "9a4b74a3-776f-314d-931b-c99c6d0a4010",
+                "instanceIdentifier": "0d1b5a80-6d14-37ee-7731-6bd1421120f3",
+                "name": "GCPOauth2AccessTokenProvider",
+                "comments": "",
+                "type": "com.dloop.nifi.gcp.oauth2.GCPOauth2AccessTokenProvider",
+                "bundle": {
+                    "group": "com.dloop",
+                    "artifact": "nifi-gcp-oauth2-provider-nar",
+                    "version": "2.9.0"
+                },
+                "properties": {
+                    "GCP Credentials Provider Service": "6114d6de-af80-3f6b-bc36-92b3e0ca9907",
+                    "Domain-wide delegation": null,
+                    "Impersonate Service Account": null,
+                    "Scope": "https://www.googleapis.com/auth/webmasters.readonly",
+                    "Project ID": null
+                },
+                "propertyDescriptors": {
+                    "GCP Credentials Provider Service": {
+                        "name": "GCP Credentials Provider Service",
+                        "displayName": "GCP Credentials Provider Service",
+                        "identifiesControllerService": true,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Domain-wide delegation": {
+                        "name": "Domain-wide delegation",
+                        "displayName": "Domain-wide delegation",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Impersonate Service Account": {
+                        "name": "Impersonate Service Account",
+                        "displayName": "Impersonate Service Account",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Scope": {
+                        "name": "Scope",
+                        "displayName": "Scope",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Project ID": {
+                        "name": "Project ID",
+                        "displayName": "Project ID",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    }
+                },
+                "controllerServiceApis": [
+                    {
+                        "type": "org.apache.nifi.oauth2.OAuth2AccessTokenProvider",
+                        "bundle": {
+                            "group": "org.apache.nifi",
+                            "artifact": "nifi-standard-services-api-nar",
+                            "version": "2.9.0"
+                        }
+                    }
+                ],
+                "scheduledState": "DISABLED",
+                "bulletinLevel": "WARN",
+                "componentType": "CONTROLLER_SERVICE",
+                "groupIdentifier": "89c9c1c1-9c42-344a-a071-c7491d033480"
+            },
+            {
+                "identifier": "6114d6de-af80-3f6b-bc36-92b3e0ca9907",
+                "instanceIdentifier": "3723a285-4c72-3de3-ada5-0497ede18145",
+                "name": "GCPCredentialsControllerService",
+                "comments": "",
+                "type": "org.apache.nifi.processors.gcp.credentials.service.GCPCredentialsControllerService",
+                "bundle": {
+                    "group": "org.apache.nifi",
+                    "artifact": "nifi-gcp-nar",
+                    "version": "2.9.0"
+                },
+                "properties": {
+                    "Authentication Strategy": "Application Default Credentials",
+                    "Scope": "https://www.googleapis.com/auth/cloud-platform",
+                    "Audience": null,
+                    "STS Token Endpoint": "https://sts.googleapis.com/v1/token",
+                    "Service Account JSON File": null,
+                    "Subject Token Provider": null,
+                    "Delegation Strategy": "Service Account",
+                    "Subject Token Type": "urn:ietf:params:oauth:token-type:jwt",
+                    "Delegation User": null,
+                    "Proxy Configuration Service": null
+                },
+                "propertyDescriptors": {
+                    "Authentication Strategy": {
+                        "name": "Authentication Strategy",
+                        "displayName": "Authentication Strategy",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Scope": {
+                        "name": "Scope",
+                        "displayName": "Scope",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Audience": {
+                        "name": "Audience",
+                        "displayName": "Audience",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "STS Token Endpoint": {
+                        "name": "STS Token Endpoint",
+                        "displayName": "STS Token Endpoint",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Service Account JSON File": {
+                        "name": "Service Account JSON File",
+                        "displayName": "Service Account JSON File",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false,
+                        "resourceDefinition": {
+                            "cardinality": "SINGLE",
+                            "resourceTypes": ["FILE"]
+                        }
+                    },
+                    "Service Account JSON": {
+                        "name": "Service Account JSON",
+                        "displayName": "Service Account JSON",
+                        "identifiesControllerService": false,
+                        "sensitive": true,
+                        "dynamic": false
+                    },
+                    "Subject Token Provider": {
+                        "name": "Subject Token Provider",
+                        "displayName": "Subject Token Provider",
+                        "identifiesControllerService": true,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Delegation Strategy": {
+                        "name": "Delegation Strategy",
+                        "displayName": "Delegation Strategy",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Subject Token Type": {
+                        "name": "Subject Token Type",
+                        "displayName": "Subject Token Type",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Delegation User": {
+                        "name": "Delegation User",
+                        "displayName": "Delegation User",
+                        "identifiesControllerService": false,
+                        "sensitive": false,
+                        "dynamic": false
+                    },
+                    "Proxy Configuration Service": {
+                        "name": "Proxy Configuration Service",
+                        "displayName": "Proxy Configuration Service",
+                        "identifiesControllerService": true,
+                        "sensitive": false,
+                        "dynamic": false
+                    }
+                },
+                "controllerServiceApis": [
+                    {
+                        "type": "org.apache.nifi.gcp.credentials.service.GCPCredentialsService",
+                        "bundle": {
+                            "group": "org.apache.nifi",
+                            "artifact": "nifi-gcp-services-api-nar",
+                            "version": "2.9.0"
+                        }
+                    }
+                ],
+                "scheduledState": "DISABLED",
+                "bulletinLevel": "WARN",
+                "componentType": "CONTROLLER_SERVICE",
+                "groupIdentifier": "89c9c1c1-9c42-344a-a071-c7491d033480"
+            }
+        ],
+        "defaultFlowFileExpiration": "0 sec",
+        "defaultBackPressureObjectThreshold": 10000,
+        "defaultBackPressureDataSizeThreshold": "1 GB",
+        "scheduledState": "ENABLED",
+        "executionEngine": "INHERITED",
+        "maxConcurrentTasks": 1,
+        "statelessFlowTimeout": "1 min",
+        "flowFileConcurrency": "UNBOUNDED",
+        "flowFileOutboundPolicy": "STREAM_WHEN_AVAILABLE",
+        "componentType": "PROCESS_GROUP"
+    },
+    "externalControllerServices": {},
+    "parameterContexts": {},
+    "flowEncodingVersion": "1.0",
+    "parameterProviders": {},
+    "latest": false
+}
